@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal de fãs de Friends com personagens, episódios, locais marcantes, quiz e muita nostalgia dos anos 90.">
+  <meta name="theme-color" content="#fbf6ee">
+  <title>FRIENDS · Portal de Fãs</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,700;1,9..144,900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="nav" id="topo">
+    <div class="nav-inner">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <span class="brand-cup">☕</span>
+        <span class="brand-name">FRIENDS</span>
+        <span class="brand-dot">·</span>
+        <span class="brand-sub">fãs</span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Menu principal">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#personagens" class="nav-link">Personagens</a>
+        <a href="#episodios" class="nav-link">Episódios</a>
+        <a href="#locais" class="nav-link">Locais</a>
+        <a href="#quiz" class="nav-link">Quiz</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <span class="float float-1" aria-hidden="true">☕</span>
+      <span class="float float-2" aria-hidden="true">🎸</span>
+      <span class="float float-3" aria-hidden="true">📷</span>
+      <span class="float float-4" aria-hidden="true">🛋️</span>
+      <span class="float float-5" aria-hidden="true">🕺</span>
+
+      <div class="hero-inner">
+        <span class="eyebrow">Um portal feito por fãs · Nova York, anos 90</span>
+        <h1 class="hero-title" aria-label="FRIENDS">
+          <span class="letter c-f">F</span><span class="letter c-r">R</span><span class="letter c-i">I</span><span class="letter c-e">E</span><span class="letter c-n">N</span><span class="letter c-d">D</span><span class="letter c-s">S</span>
+        </h1>
+        <svg class="hero-swoosh" viewBox="0 0 420 40" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M14 24 Q 116 -8 210 16 T 406 12" fill="none" stroke="#e2574c" stroke-width="9" stroke-linecap="round" opacity="0.85"/>
+        </svg>
+        <p class="hero-tag">A história de seis amigos, muitos cafés e momentos inesquecíveis.</p>
+        <div class="hero-actions">
+          <a href="#personagens" class="btn btn-primary">Conheça os personagens</a>
+          <a href="#episodios" class="btn btn-ghost">Explorar episódios</a>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#personagens" aria-label="Rolar para a próxima seção">▾</a>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track" id="tickerTrack">
+        <span>O sofá mais famoso de Nova York</span><span>☕</span>
+        <span>How you doin'?</span><span>☕</span>
+        <span>Smelly Cat</span><span>☕</span>
+        <span>PIVOT!</span><span>☕</span>
+        <span>Portas roxa e amarela no 2º andar</span><span>☕</span>
+        <span>We were on a break!</span><span>☕</span>
+        <span>Estamos aqui nos seus invólucros empoeirados</span><span>☕</span>
+      </div>
+    </div>
+
+    <section class="section" id="personagens">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">O elenco</span>
+          <h2>Conheça os personagens</h2>
+          <p>Seis personalidades que cabem em um sofá laranja e um universo inteiro de confusões, abraços e cafés.</p>
+        </header>
+
+        <div class="chars-grid" id="charsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="episodios">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">A maratona</span>
+          <h2>Explorar episódios</h2>
+          <p>Dez temporadas, 236 episódios e uma nostalgia diária. Filtre por temporada e reviva os momentos que ficaram.</p>
+        </header>
+
+        <div class="filters reveal" id="seasonFilters" role="tablist" aria-label="Filtrar por temporada"></div>
+
+        <div class="eps-grid" id="epsGrid"></div>
+        <p class="eps-note" id="epsNote"></p>
+      </div>
+    </section>
+
+    <section class="section" id="locais">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">O mapa afetivo</span>
+          <h2>Locais marcantes</h2>
+          <p>Pequenos pedaços de Nova York que viraram casa, trabalho e ponto de encontro da turma.</p>
+        </header>
+
+        <div class="places-wrap reveal">
+          <button class="car-btn car-prev" id="carPrev" aria-label="Local anterior">←</button>
+          <div class="places-track" id="placesTrack" tabindex="0"></div>
+          <button class="car-btn car-next" id="carNext" aria-label="Próximo local">→</button>
+        </div>
+        <div class="car-dots" id="carDots"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="quiz">
+      <div class="container container-narrow">
+        <header class="section-head reveal">
+          <span class="eyebrow">O teste dos amigos</span>
+          <h2>Quiz Friends</h2>
+          <p>Responda e descubra o quanto aquele sofá laranja é parte de você.</p>
+        </header>
+
+        <div class="quiz-card reveal" id="quizCard"></div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="eyebrow">Feito com saudade</span>
+          <h2>Sobre este projeto</h2>
+        </header>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>Os episódios de Friends acompanharam gerações: do primeiro olhar de Ross por Rachel à despedida no apartamento vazio. Este site é uma homenagem a essa energia — <strong>um abraço nostálgico para quem cresceu com a turma</strong> ao lado de uma xícara de café.</p>
+            <p>Aqui você encontra os personagens, momentos de todas as dez temporadas, os lugares que viraram cenário de quem a gente é hoje e um quiz para rir (e lembrar) daqueles detalhes que só os fãs de verdade conhecem.</p>
+            <ul class="about-facts">
+              <li><strong>10</strong> temporadas</li>
+              <li><strong>236</strong> episódios</li>
+              <li><strong>1</strong> sofá laranja inesquecível</li>
+            </ul>
+          </div>
+          <div class="about-card reveal">
+            <span class="about-quote">“Nada é mais importante do que estar aqui, num café, com quem você ama.”</span>
+            <span class="about-thanks">Obrigado por fazer parte dessa história. Agora senta, pega um café e aperta o play.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <span class="brand-name">FRIENDS</span>
+        <p>Um site feito por fãs para fãs de Friends.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#inicio">Início</a>
+        <a href="#personagens">Personagens</a>
+        <a href="#episodios">Episódios</a>
+        <a href="#locais">Locais</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#sobre">Sobre</a>
+      </div>
+      <div class="footer-note">
+        <p>Projeto de fã sem fins lucrativos. FRIENDS™ e todos os personagens, nomes e elementos relacionados pertencem aos seus respectivos detentores de direitos. Este site é uma homenagem independente e <strong>não é afiliado, endossado ou patrocinado</strong> pela série, seus criadores ou estúdios.</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Portal de Fãs · feito com ☕ e mta saudade</span>
+    </div>
+  </footer>
+
+  <button class="totop" id="toTop" aria-label="Voltar ao topo">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
